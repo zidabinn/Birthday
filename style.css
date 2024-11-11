@@ -1,0 +1,140 @@
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #ff7b7b, #ffb3c1);
+    overflow: hidden;
+    position: relative;
+  }
+
+  /* Card Styling */
+  .card {
+    width: 350px;
+    padding: 30px;
+    background: #fff;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    border-radius: 15px;
+    text-align: center;
+    position: relative;
+    z-index: 1;
+  }
+
+  /* Title Styling */
+  .card h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #ff4081;
+    font-weight: bold;
+    animation: title-bounce 0.5s ease-in-out;
+  }
+
+  .card h2 {
+    font-size: 1.3em;
+    color: #4caf50;
+    margin: 10px 0 20px;
+    font-style: italic;
+  }
+
+  .card p {
+    font-size: 1.1em;
+    color: #333;
+    margin: 10px 0;
+    font-weight: bold;
+  }
+
+  /* Button Styling */
+  .card button {
+    padding: 12px 25px;
+    background: #ff4081;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .card button:hover {
+    background: #e91e63;
+    transform: scale(1.05);
+  }
+
+  /* Photo Gallery */
+  .gallery {
+    display: none;
+    margin-top: 20px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .gallery img {
+    width: 120px;
+    height: 120px;
+    margin: 10px;
+    border-radius: 10px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    opacity: 0;
+    animation: fadeIn 0.5s ease forwards;
+  }
+
+  /* Fade In Effect for Images */
+  @keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+  }
+
+  /* Button for Next Page */
+  .next-button {
+    display: none;
+    margin-top: 20px;
+    padding: 12px 25px;
+    background: #4caf50;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.2em;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+
+  .next-button:hover {
+    background: #388e3c;
+    transform: scale(1.05);
+  }
+
+  /* Balloon Styles */
+  .balloon {
+    position: absolute;
+    bottom: -150px;
+    width: 40px;
+    height: 60px;
+    background-color: #ff4081;
+    border-radius: 50% 50% 60% 60%;
+    animation: floatUp 5s ease-in-out infinite;
+  }
+
+  .balloon:before {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    width: 2px;
+    height: 10px;
+    background-color: #555;
+    transform: translateX(-50%);
+  }
+
+  /* Balloon Animation */
+  @keyframes floatUp {
+    0% {
+      transform: translateY(0) translateX(0) rotate(0);
+      opacity: 1;
+    }
+    100% {
+      transform: translateY(-100vh) translateX(30px) rotate(20deg);
+      opacity: 0;
+    }
+  }
